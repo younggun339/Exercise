@@ -29,4 +29,12 @@ int rbtree_erase(rbtree *, node_t *);
 
 int rbtree_to_array(const rbtree *, key_t *, const size_t);
 
+void traverse_and_delete_node(rbtree *t, node_t *node);
+void rbtree_insert_fixup(rbtree *t, node_t *node);
+void left_rotate(rbtree *t, node_t *node);
+void right_rotate(rbtree *t, node_t *node);
+node_t *get_next_node(const rbtree *t, node_t *p);
+void rbtree_erase_fixup(rbtree *t, node_t *parent, int is_left);
+void exchange_color(node_t *a, node_t *b);
+
 #endif  // _RBTREE_H_

@@ -1,6 +1,6 @@
 .PHONY: test clean
 
-CFLAGS=-I ../common -Wall -O #-DSENTINEL
+CFLAGS=-I ../common -Wall -O -DSENTINEL
 
 test: test-rbtree
 	./test-rbtree
